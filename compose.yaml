@@ -1,0 +1,7 @@
+﻿services:
+  twilioazureffmpegrealtime:
+    image: twilioazureffmpegrealtime
+    build:
+      context: .
+      dockerfile: TwilioAzureFfmpegRealtime/Dockerfile
+
