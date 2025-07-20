@@ -1,6 +1,7 @@
 # TwilioAzureFfmpegRealtime
 
-**Realtime Twilio Audio Transformation for Azure Speech Recognition using FFmpeg in .NET**
+*This project is a practical companion and code example for the article:*  
+[Realtime Twilio Audio Transformation for Azure Speech Recognition using FFmpeg in .NET](https://yaroslavyushchenko.com/articles/realtime-audio-conversion)
 
 ---
 
