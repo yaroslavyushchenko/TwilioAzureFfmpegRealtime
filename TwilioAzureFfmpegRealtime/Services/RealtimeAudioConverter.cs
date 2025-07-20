@@ -53,15 +53,14 @@ public class RealtimeAudioConverter : IDisposable
         await _ffmpegProcess.StandardInput.BaseStream.FlushAsync();
 
         var buffer = new byte[4096];
-        using var memoryStream = new MemoryStream();
         var bytesRead = await _ffmpegProcess.StandardOutput.BaseStream.ReadAsync(buffer, 0, buffer.Length);
 
         if (bytesRead > 0)
         {
-            memoryStream.Write(buffer, 0, bytesRead);
+            return buffer.AsSpan(0, bytesRead).ToArray();
         }
 
-        return memoryStream.ToArray();
+        return [];
     }
 
     public void Dispose()
